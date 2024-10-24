@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Reader App</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="script.js" defer></script> <!-- Link to your JavaScript file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1>Bible Reader App</h1>
+                <ul class="nav-menu">
+                    <li><button onclick="document.getElementById('dailyPraiseSong').scrollIntoView();">Daily Praise Song</button></li>
+                    <li><button onclick="document.getElementById('dailyBibleVerse').scrollIntoView();">Daily Bible Verse</button></li>
+                    <li><button onclick="document.getElementById('bible').scrollIntoView();">Bible Reader</button></li>
+                    <a href="http://127.0.0.1:5500/AppCS/index.html">
+                        <button>Login/Signup</button>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dailyPraiseSong">
+            <h2>Daily Praise Song</h2>
+            <div id="songText"></div>
+        </section>
+
+        <section id="dailyBibleVerse">
+            <h2>Daily Bible Verse</h2>
+            <div id="verseText"></div>
+        </section>
+
+        <section id="bible">
+            <h2>Bible Reader</h2>
+            <div>
+                <label for="bookSelect">Select Book:</label>
+                <select id="bookSelect">
+                    <option value="">Select a book</option>
+                </select>
+
+                <label for="chapterSelect">Select Chapter:</label>
+                <select id="chapterSelect">
+                    <option value="">Select a chapter</option>
+                </select>
+
+                <label for="verseSelect">Select Verse:</label>
+                <select id="verseSelect">
+                    <option value="">Select a verse</option>
+                </select>
+
+                <button id="loadButton">Load Verse</button>
+                <button id="loadChapterButton">Load Chapter</button>
+            </div>
+            <div id="chapterText"></div>
+        </section>
+    </main>
+</body>
+</html>
